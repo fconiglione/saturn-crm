@@ -22,46 +22,125 @@ header {
 
 /* Large Header */
 
-.large-header {
+.header {
   padding: 0 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
 }
-.large-header div:first-child {
+.header div:first-child {
   display: flex;
   flex-direction: row;
   gap: 15px;
   align-items: center;
 }
-.large-header-logo {
+.header-logo {
   height: 50px;
 }
-.large-header-dashboard-icon {
+.header-dashboard-icon {
   height: 20px;
   filter: invert(100%);
 }
-.large-header-navigation-bar {
+.header-navigation-bar {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.large-header-icon-bar {
+.header-icon-bar {
   border-right: 2px solid #ffffff;
   padding: 0 15px;
 }
-.large-header-icon-bar i {
+.header-icon-bar i, .small-header-navigation-menu i {
   color: #ffffff;
   font-size: 18px;
 }
-.large-header-profile-picture {
+.header-profile-picture {
   height: 25px;
   border-radius: 50%;
 }
-.large-header-navigation-bar {
+.header-navigation-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
+}
+@media screen and (max-width: 864px) {
+  .header-search-bar {
+    display: none;
+  }
+}
+@media screen and (min-width: 864px) {
+  .header-icon-bar i:first-child {
+    display: none;
+  }
+}
+.header-search-bar {
+  padding: 5px 10px;
+  color: #eeeeee;
+  background-color: #7200e6;
+  font-weight: 500;
+  border: none;
+  width: 30vw;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-direction: row;
+}
+.search-controls div:first-child {
+  width: 100%;
+}
+.header-search-bar input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #eeeeee;
+}
+.search-controls button {
+  background-color: transparent;
+  border: none;
+}
+.search-controls button i {
+  color: #eeeeee;
+  opacity: 0.7;
+}
+.header-search-bar input:focus {
+  outline: none;
+}
+.header-workspace-selector {
+  padding: 5px 10px;
+  color: #eeeeee;
+  background-color: #7200e6;
+  font-weight: 500;
+  border: none;
+  width: auto;
+  border-radius: 10px;
+}
+.header-workspace-selector select {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header-workspace-selector select:focus {
+  background-color: transparent;
+}
+.header-workspace-selector select:focus option {
+  color: #000000;
+  background-color: #eeeeee;
+}
+@media screen and (min-width: 540px) {
+  .small-header-navigation-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  .header-icon-bar, .header-workspace-selector {
+    display: none !important;
+  }
 }

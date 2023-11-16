@@ -1,20 +1,32 @@
 header
-    div.large-header
+    div.header
         div
             div
                 a(href='https://www.saturncrm.com/')
-                    img.large-header-dashboard-icon(src='/images/dashboard-grid-icon.png', alt='Dashboard 3x3 grid icon')
+                    img.header-dashboard-icon(src='/images/dashboard-grid-icon.png', alt='Dashboard 3x3 grid icon')
             div
                 a(href='https://www.saturncrm.com/')
-                    img.large-header-logo(src='/images/saturn-crm-default-header-logo.png', alt='Saturn CRM Default Header Logo')
-        div
-            include search-bar
-        div.large-header-navigation-bar
-            div.large-header-icon-bar
+                    img.header-logo(src='/images/saturn-crm-default-header-logo.png', alt='Saturn CRM Default Header Logo')
+        div.header-search-bar
+            form(action='/search', method='get', id='searchForm')
+                div.search-controls
+                    div
+                        button(type='submit', id='searchButton')
+                            i.fa-solid.fa-search
+                        input(type='text', name='q', placeholder='Search for anything...', id='searchInput')
+                    div
+                        button(type='button', id='clearButton')
+                            i.fa-solid.fa-times
+        div.header-navigation-bar
+            div.header-icon-bar
+                i.fa-solid.fa-search
                 i.fa-solid.fa-question
                 i.fa-solid.fa-gear
                 i.fa-solid.fa-bell
+            div.header-workspace-selector
+                select(id='workspaceSelector', name='workspace')
+                    option.workspace-selector-placeholder(value='', hidden, selected) Select Workspace
             div
-                include workspace-selector
-            div
-                img.large-header-profile-picture(src='/images/profile-picture-placeholder.png', alt='Profile picture placeholder')
+                img.header-profile-picture(src='/images/profile-picture-placeholder.png', alt='Profile picture placeholder')
+            div.small-header-navigation-menu
+                i.fa-solid.fa-ellipsis-vertical
