@@ -1,0 +1,67 @@
+/* Global Styling */
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 4%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Header */
+
+header {
+  background-color: #7f00ff;
+}
+
+/* Large Header */
+
+.large-header {
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.large-header div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.large-header-logo {
+  height: 50px;
+}
+.large-header-dashboard-icon {
+  height: 20px;
+  filter: invert(100%);
+}
+.large-header-navigation-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.large-header-icon-bar {
+  border-right: 2px solid #ffffff;
+  padding: 0 15px;
+}
+.large-header-icon-bar i {
+  color: #ffffff;
+  font-size: 18px;
+}
+.large-header-profile-picture {
+  height: 25px;
+  border-radius: 50%;
+}
+.large-header-navigation-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
