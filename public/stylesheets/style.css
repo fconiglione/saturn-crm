@@ -1,17 +1,17 @@
 /* Global Styling */
 
+html {
+  background-color: #7f00ff;
+}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
 }
-
 main {
   padding: 4%;
-}
-
-a {
-  color: #00B7FF;
+  background-color: #7200e6;
+  color: #ffffff;
 }
 
 /* Header */
@@ -21,7 +21,7 @@ header {
   height: 100%;
 }
 
-/* Large Header */
+/* Header */
 
 .header {
   padding: 0 4%;
@@ -73,7 +73,7 @@ header {
   }
 }
 @media screen and (min-width: 864px) {
-  .header-icon-bar i:first-child {
+  .header-icon-bar a:first-child {
     display: none;
   }
 }
@@ -110,6 +110,7 @@ header {
 .search-controls button i {
   color: #eeeeee;
   opacity: 0.7;
+  cursor: pointer;
 }
 .header-search-bar input:focus {
   outline: none;
@@ -120,7 +121,7 @@ header {
   background-color: #7200e6;
   font-weight: 500;
   border: none;
-  width: auto;
+  max-width: 150px;
   border-radius: 10px;
 }
 .header-workspace-selector select {
@@ -128,6 +129,7 @@ header {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  max-width: 150px;
 }
 .header-workspace-selector select:focus {
   background-color: transparent;
@@ -145,4 +147,78 @@ header {
   .header-icon-bar, .header-workspace-selector {
     display: none !important;
   }
+}
+
+/* Sub-Header */
+
+.sub-header {
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: row;
+  height: 30px;
+}
+.sub-header-item a {
+  text-decoration: none;
+  color: #ffffff;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.sub-header-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-header-item a:active, .sub-header-item a:hover {
+  /* Must use JS to keep when active */
+  background-color: #7200e6;
+}
+.sub-header-plus {
+  margin: 0 15px;
+}
+.sub-header-plus button {
+  background-color: #7200e6;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* No Workspaces */
+
+.no-workspaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 80vh;
+  padding: 0 10%;
+}
+.no-workspaces-icon {
+  height: 150px;
+  width: auto;
+}
+.no-workspaces h3, .no-workspaces p {
+  text-align: center;
+  margin: 0;
+}
+.no-workspaces a {
+  background-color: #04AEC4;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.no-workspaces a:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-5px);
 }

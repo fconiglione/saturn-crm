@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div.no-workspaces
+      img.no-workspaces-icon(src='/images/rocket.png', alt='An animated rocket')
+      h3 Uh oh! We couldn't find any active workspaces.
+      p Start a new workspace by clicking the button below.
+      a(href='#') Create New Workspace
