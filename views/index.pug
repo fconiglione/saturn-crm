@@ -1,8 +1,75 @@
 extends layout
 
 block content
-    div.no-workspaces
-      img.no-workspaces-icon(src='/images/rocket.png', alt='An animated rocket')
-      h3 Uh oh! We couldn't find any active workspaces.
-      p Start a new workspace by clicking the button below.
-      a(href='#') Create New Workspace
+    button#create-workspace-btn
+        i.fa-solid.fa-plus
+    section.workspace-templates-section
+        div.workspace-templates
+            div.workspace-templates-container
+                div.create-workspaces-title
+                    h3 Start a new workspace
+                div.workspace-templates-nav
+                    a(href='#')
+                        h3 Template gallery
+                        i.fa-solid.fa-arrow-right
+            div.workspace-templates-container
+                div.workspace-template
+                    a(href='#')
+                        div
+                            img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                        div
+                            h3 Blank
+                            p Start from scratch with an empty workspace
+                div.workspace-template
+                    a(href='#')
+                        div
+                            img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                        div
+                            h3 Blank
+                            p Start from scratch with an empty workspace
+                div.workspace-template
+                    a(href='#')
+                        div
+                            img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                        div
+                            h3 Blank
+                            p Start from scratch with an empty workspace
+                div.workspace-template
+                    a(href='#')
+                        div
+                            img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                        div
+                            h3 Blank
+                            p Start from scratch with an empty workspace
+    section.active-workspaces-section
+        div.active-workspaces
+            div.active-workspace
+                a(href='#')
+                    div.active-workspace-preview
+                        img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                    div.active-workspace-details
+                        div
+                            h3 ABC Industries Ltd.
+                        div.active-workspace-nav
+                            div
+                                img(src='/images/saturn-crm-small-logo-default.png', alt='Saturn CRM small purple logo')
+                                p Opened Nov 11, 2023
+                            i.fa-solid.fa-ellipsis-vertical
+            div.active-workspace
+                a(href='#')
+                    div.active-workspace-preview
+                        img(src='/images/blank-workspace-template.png', alt='A blank workspace template')
+                    div.active-workspace-details
+                        div
+                            h3 XYZ Industries Ltd.
+                        div.active-workspace-nav
+                            div
+                                img(src='/images/saturn-crm-small-logo-default.png', alt='Saturn CRM small purple logo')
+                                p Opened Nov 11, 2023
+                            i.fa-solid.fa-ellipsis-vertical
+
+    //section.no-workspaces
+    //    img.no-workspaces-icon(src='/images/rocket.png', alt='An animated rocket')
+    //    h3 Uh oh! We couldn't find any active workspaces.
+    //    p Start a new workspace by clicking the button below.
+    //    a(href='#') Create New Workspace
