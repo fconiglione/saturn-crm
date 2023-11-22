@@ -42,6 +42,19 @@ block content
                             h3 Blank
                             p Start from scratch with an empty workspace
     section.active-workspaces-section
+        div.active-workspaces-container
+            div.active-workspaces-title
+                h3 Recent workspaces
+            div.active-workspaces-nav
+                div
+                    fieldset
+                        label(for='sortBySelector') Group by:
+                        div
+                            select(id='sortBySelector', name='sortByQuery')
+                                   option.sortByItem(selected) Last Opened
+                                   option.sortByItem(selected) Last Modified
+                                   option.sortByItem(selected) Creation Date
+                                   option.sortByItem(selected) Name
         div.active-workspaces
             div.active-workspace
                 a(href='#')

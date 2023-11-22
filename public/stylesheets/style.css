@@ -229,6 +229,7 @@ header {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   display: flex;
+  z-index: 9999;
 }
 #create-workspace-btn:hover {
   background-color: #f4f4f4;
@@ -314,11 +315,53 @@ header {
 
 .active-workspaces-section {
   background-color: #7f00ff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.active-workspaces-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .active-workspace-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.active-workspaces-nav fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  /* Making font size default of h3 */
+  font-size: 1.1em;
+}
+.active-workspaces-nav select {
+  border: none;
+  cursor: pointer;
+  max-width: 150px;
+  background-color: transparent;
+  color: #eeeeee;
+  font-weight: 500;
+  font-family: inherit;
+  /* Making font size default of h3 */
+  font-size: 1em;
+}
+.active-workspaces-nav div:nth-child(2) {
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.active-workspaces-nav div:nth-child(2):hover {
+  background-color: #6600cc;
+}
+.active-workspaces-nav select:focus option {
+  color: #000000;
+  background-color: #eeeeee;
 }
 .active-workspace a {
   text-decoration: none;
