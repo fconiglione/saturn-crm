@@ -357,6 +357,17 @@ header {
   flex-direction: row;
   gap: 5px;
 }
+.active-workspace-nav div:last-child {
+  padding: 8px 13px;
+}
+.active-workspace-nav i {
+  margin: 0;
+  padding: 0;
+}
+.active-workspace-nav div:last-child:hover {
+  background-color: #6600cc;
+  border-radius: 50%;
+}
 
 /* No Workspaces */
 
