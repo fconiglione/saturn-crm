@@ -1,16 +1,66 @@
 header
     div.header
-        div
+        div.header-inner
             div
-                a(href='https://www.saturncrm.com/')
+                button.app-launcher-btn(onclick='open_app_launcher()')
                     img.header-dashboard-icon(src='/images/dashboard-grid-icon.png', alt='Dashboard 3x3 grid icon')
+            div#app-launcher.inactive
+                div.app-launcher
+                    div.app-launcher-main
+                        div.app-launcher-top
+                            div
+                                button.app-launcher-btn(onclick='close_app_launcher()')
+                                    img.header-dashboard-icon(src='/images/dashboard-grid-icon.png', alt='Dashboard 3x3 grid icon')
+                            div
+                                a(href='https://utf.ai/my-utf') Access My UTF
+                                    i.fa-solid.fa-arrow-right
+                        div.app-launcher-middle-container-1
+                            div
+                                h3 Apps
+                            div.apps
+                                div.app
+                                    a(href='#')
+                                        img.app-logo(src='/images/saturn-crm-small-logo-default.png', alt='Small default Saturn CRM logo')
+                                        p Saturn CRM
+                                div.app
+                                    a(href='#')
+                                        img.app-logo(src='/images/saturn-crm-small-logo-default.png', alt='Small default Saturn CRM logo')
+                                        p Saturn CRM
+                                div.app
+                                    a(href='#')
+                                        img.app-logo(src='/images/saturn-crm-small-logo-default.png', alt='Small default Saturn CRM logo')
+                                        p Saturn CRM
+                                div.app
+                                    a(href='#')
+                                        img.app-logo(src='/images/saturn-crm-small-logo-default.png', alt='Small default Saturn CRM logo')
+                                        p Saturn CRM
+                            div.apps-nav
+                                a(href='#') See all apps
+                                    i.fa-solid.fa-arrow-right
+                        hr
+                        div.app-launcher-middle-container-2
+                            div
+                                a(href='#')
+                                    i.fa-solid.fa-gear
+                                    p Settings
+                            div
+                                a(href='#')
+                                    i.fa-solid.fa-question
+                                    p Help Center
+                    div.app-launcher-bottom
+                        div
+                            a(href='https://www.utf.ai/privacy-policy/') Privacy Policy
+                        div
+                            i.fa-solid.fa-circle
+                        div
+                            a(href='https://www.utf.ai/terms-of-use/') Terms of Use
             div
                 a(href='https://www.saturncrm.com/')
                     img.header-logo(src='/images/saturn-crm-default-header-logo.png', alt='Saturn CRM Default Header Logo')
         div.header-search-bar
             form(action='/search', method='get', id='searchForm')
                 div.search-controls
-                    div
+                    div.header-inner
                         button(type='submit', id='searchButton')
                             i.fa-solid.fa-search
                         input(type='text', name='q', placeholder='Search for anything...', id='searchInput')
@@ -18,7 +68,7 @@ header
                         button(type='button', id='clearButton')
                             i.fa-solid.fa-times
         div.header-navigation-bar
-            div.header-icon-bar
+            div.header-icon-bar.header-inner
                 a(href='#')
                     i.fa-solid.fa-search
                 a(href='#')

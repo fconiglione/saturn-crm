@@ -17,3 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
         clearButton.style.display = 'none';
     });
 });
+function open_app_launcher() {
+    var appLauncher = document.getElementById("app-launcher");
+    appLauncher.style.display = "block";
+    appLauncher.classList.remove("inactive");
+    appLauncher.classList.add("active");
+}
+
+function close_app_launcher() {
+    var appLauncher = document.getElementById("app-launcher");
+    appLauncher.classList.remove("active");
+    appLauncher.classList.add("inactive");
+}
